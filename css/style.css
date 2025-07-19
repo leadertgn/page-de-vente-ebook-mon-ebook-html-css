@@ -1,0 +1,270 @@
+
+/* Variables CSS pour faciliter la personnalisation */
+:root {
+    --primary-color: #0066cc; /* Bleu vif pour les titres et boutons */
+    --secondary-color: #333;   /* Gris foncé pour le texte principal */
+    --background-light: #f4f7f6; /* Fond léger */
+    --text-light: #555;      /* Gris moyen pour texte secondaire */
+    --border-color: #ddd;    /* Couleur de bordure claire */
+    --box-shadow: rgba(0, 0, 0, 0.1);
+}
+/* Styles Généraux */
+body {
+    font-family: Arial, sans-serif;/* Police de caractère simple et lisible[span_20](end_span) */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    background-color: var(--background-light);
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Header / Hero Section */
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden; /* Pour contenir l'image qui pourrait déborder */
+}
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.hero .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ebook-cover {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px var(--box-shadow);
+    margin-top: 30px;
+    display: block; /* Pour centrer l'image */
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Sections Générales */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--box-shadow);
+}
+section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+/* Section Problème/Solution */
+.section-problem-solution .grid-2-cols {
+    display: flex;
+    flex-wrap: wrap; /* Permet le passage à la ligne sur petits écrans */
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.section-problem-solution .box {
+    flex: 1; /* Permet aux boîtes de prendre l'espace disponible */
+    min-width: 300px; /* Taille minimale avant de passer à la ligne */
+    background-color: var(--background-light);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+.section-problem-solution .box h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+.highlight-solution {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 40px;
+}
+/* Listes (Ce que vous allez accomplir, Bonus, Pour qui) */
+.check-list, .arrow-list {
+    list-style: none; /* Supprime les puces par défaut */
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto 30px auto; /* Centrage et marge */
+}
+.check-list li, .arrow-list li {
+    padding-left: 30px; /* Espace pour l'icône */
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 1.1em;
+}
+.check-list li::before {
+    content: '✅'; /* Icône de coche */
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+.arrow-list li::before {
+    content: '➡️'; /* Icône de flèche */
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+/* Aperçu du Contenu Détaillé */
+.chapter-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-top: 30px;
+}
+.chapter-item {
+    background-color: var(--background-light);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+}
+.chapter-item h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+/* Section Prix et Appel à l'Action */
+.section-cta-price {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 50px 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+.section-cta-price h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+.price-value {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 30px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.btn-cta {
+    display: inline-block;
+    background-color: #ffcc00; /* Jaune vif */
+    color: var(--primary-color);
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.btn-cta:hover {
+    background-color: #e6b800; /* Jaune plus foncé au survol */
+    transform: translateY(-3px);
+}
+/* Section Garantie */
+.section-guarantee {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--text-light);
+    padding: 20px 0;
+    background-color: transparent; /* Pas de fond blanc ni d'ombre */
+    box-shadow: none;
+    border-top: 1px dashed var(--border-color);
+    margin-top: 20px;
+}
+/* Section Affiliés */
+.section-affiliate {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e0eaf2; /* Bleu très clair */
+    border-radius: 8px;
+    margin-top: 40px;
+}
+.section-affiliate h2 {
+    color: var(--primary-color);
+}
+.btn-affiliate {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+.btn-affiliate:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    color: var(--text-light);
+    font-size: 0.9em;
+    background-color: #eee;
+    border-top: 1px solid var(--border-color);
+}
+/* Responsive Design (Media Queries)[span_21](end_span) */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero .subtitle {
+        font-size: 1em;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    .section-problem-solution .grid-2-cols {
+        flex-direction: column; /* Empile les boîtes sur mobile[span_22](end_span) */
+    }
+    .btn-cta {
+        font-size: 1.2em;
+        padding: 15px 30px;
+    }
+    .price-value {
+        font-size: 2.5em;
+    }
+    .chapter-list {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+}
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 40px 15px;
+    }
+    .container {
+        padding: 15px;
+    }
+    .hero h1 {
+        font-size: 1.7em;
+    }
+    .ebook-cover {
+        max-width: 250px;
+    }
+    .btn-cta {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+    .price-value {
+        font-size: 2em;
+    }
+}
